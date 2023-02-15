@@ -1,6 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 
 export default function Header() {
+    console.log('header');
   return (
       <div>
           <h1>
