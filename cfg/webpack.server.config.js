@@ -13,7 +13,7 @@ module.exports = {
   },
   resolve:{
     extensions:[
-      '.js', '.jsx', '.ts', '.tsx', '.json'
+      '.js', '.jsx', '.ts', 'tsx', 'json'
     ]
   },
   externals:[nodeExternals()],
@@ -21,7 +21,22 @@ module.exports = {
     rules:[{
       test:/\.[tj]sx?$/,
       use:['ts-loader']
-    }]
+    },
+      {
+      test: /\.css$/,
+        use: [{
+        loader: 'css-loader',
+        options: {
+          modules: {
+            mode: 'local', 
+            localIdentName: '[name]__[local]--[hash:base64:5]',
+          },
+          onlyLocals: true,
+        }
+       }
+      ],
+    }
+    ]
   },
   optimization: {
     minimize: false
