@@ -23,7 +23,7 @@ module.exports = {
       use:['ts-loader']
     },
       {
-      test: /\.css$/,
+      test: /\.less$/,
         use: [{
         loader: 'css-loader',
         options: {
@@ -33,7 +33,8 @@ module.exports = {
           },
           onlyLocals: true,
         }
-       }
+       }, 
+        'less-loader', 
       ],
     }
     ]
