@@ -1,4 +1,4 @@
-export const indexTemplate = (content) => `
+export const indexHtmlTemplate = (content) => `
 <!DOCTYPE html>
 <html lang="en">
 
