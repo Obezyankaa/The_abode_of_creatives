@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+   "@types/react": "^17.0.50",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
@@ -28,10 +29,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
-    "@hot-loader/react-dom": "^17.0.1",
+   "@hot-loader/react-dom": "^17.0.1",
     "@types/jest": "^28.1.6",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^3.4.2",
