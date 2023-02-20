@@ -7,11 +7,13 @@ import { CartText } from './CartText';
 
 export function Card() {
   return (
+    <div>
     <li className={styles.card}>
       <CartText />
       <CartPreview />
       <CartMenu />
       <CartControls />
     </li>
+    </div>
   );
 }
