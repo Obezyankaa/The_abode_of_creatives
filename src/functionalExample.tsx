@@ -1,5 +1,11 @@
 // add(1)(1) // -> 2
 
+import React from "react";
+import { getChecked } from "./utils/react/getChecked";
+import { getValue } from "./utils/react/getValue";
+import { preventDefault } from "./utils/react/preventDefault";
+import { stopPropagation } from "./utils/react/stopPropagation";
+
 const add = (leftSide: number) => (reghrSide: number) => leftSide + reghrSide;
 
 const addOne = add(1);
@@ -66,11 +72,10 @@ function Checkbox(props: { onChange: (value: boolean) => void, value: boolean })
     )
 }
 
-function pickFromSvntheticEvent<T extends HTMLElement>() {
-    return <K extends keyof T>(key: K) =>
-           <E extends ((t: T[K]) => void)>(fn: E) =>
-           (e: React.SyntheticEvent<T>) => fn(e.currentTarget[key]);
+
+function NotStandardLink(props: any) {
+        return (
+            <a onClick={preventDefault(stopPropagation(props.onClick))}>Hello world</a>
+        )
 }
 
-// export const getValue = pickFromSvntheticEvent<HTMLInputElement>()('value');
-// export const getChecket = pickFromSvntheticEvent<HTMLInputElement>()('checked');
