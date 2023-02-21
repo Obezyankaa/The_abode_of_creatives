@@ -1,18 +1,18 @@
 import React from 'react';
 import styles from './card.css';
-import { CartControls } from './CartControls';
-import { CartMenu } from './CartMenu';
-import { CartPreview } from './CartPreview';
-import { CartText } from './CartText';
+import { CardControls } from './CardControls';
+import { CardMenu } from './CardMenu';
+import { CardPreview } from './CardPreview';
+import { CardText } from './CardText';
 
 export function Card() {
   return (
     <div>
     <li className={styles.card}>
-      <CartText />
-      <CartPreview />
-      <CartMenu />
-      <CartControls />
+      <CardText />
+      <CardPreview />
+      <CardMenu />
+      <CardControls />
     </li>
     </div>
   );

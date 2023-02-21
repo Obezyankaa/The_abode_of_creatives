@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './cartcontrols.css';
+import styles from './cardcontrols.css';
 
-export function CartControls() {
+export function CardControls() {
   return (
  <div className={styles.controls}>
         <div className={styles.karmaCounter}>

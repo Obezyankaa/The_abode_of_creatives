@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './cartmenu.css';
+import styles from './cardmenu.css';
 
-export function CartMenu() {
+export function CardMenu() {
   return (
  <div className={styles.menu}>
         <button className={styles.menuButton}>
