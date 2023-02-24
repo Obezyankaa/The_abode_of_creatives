@@ -4,5 +4,4 @@ function pickFromSvntheticEvent<T extends HTMLElement>() {
            (e: React.SyntheticEvent<T>) => fn(e.currentTarget[key]);
 }
 
-
 export const getChecked = pickFromSvntheticEvent<HTMLInputElement>()('checked');
