@@ -17,10 +17,11 @@
     display: flex;
     align-items: center;
     padding: 5px 15px;
+    cursor: pointer;
 }
 
-.cmd__item svg:hover {
-    stroke: #CC6633;
+
+.cmd__svg:hover {
     fill: #CC6633;
 }
 
@@ -74,5 +75,20 @@
    .cmd__item:nth-child(6n) {
     display: none;
    }
+}
+
+@media all and (max-width: 1023px) {
+    .cmd__block {
+       height: 110px;
+       top: 50px;
+    }
+        
+    .cmd__item:nth-child(3n+1) {
+        display: none;
+    }
+
+     .cmd__item:nth-child(-4n+2) {
+        display: none;
+    }
 
 }

@@ -8,7 +8,7 @@ interface IDropsownProps {
 }
 
 export function CardMenu() {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
   console.log('open===>', open);
   
   return (
@@ -22,7 +22,7 @@ export function CardMenu() {
             </svg>
         </button>
       </div>
-      {open ? (<CardDropdownMenu />) : (console.log('закрыт'))}
+      {open ? (<CardDropdownMenu open={open} setOpen={setOpen}  />) : (console.log('закрыт'))}
     </>
   );
 }
