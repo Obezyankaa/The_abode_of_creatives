@@ -9,10 +9,6 @@
     box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
 }
 
-.cmd__list {
-
-}
-
 .cmd__item {
     display: flex;
     align-items: center;
@@ -21,9 +17,10 @@
 }
 
 
-.cmd__svg:hover {
-    fill: #CC6633;
-}
+.cmd__svg:hover { 
+    color: red; 
+    fill: red; 
+} 
 
 .cmd__block_text {
     padding-bottom: 10px;

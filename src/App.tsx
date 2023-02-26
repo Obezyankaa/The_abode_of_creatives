@@ -15,7 +15,7 @@ function AppComponent() {
         {/* <div style={{padding: 20}}>
           <br />
           <Dropdown onClose={() => console.log('closed')} onOpen={() => console.log('opened')} button={<button>Test</button>}>
-            <div>block</div>
+          <div>block</div>
           </Dropdown>
         </div> */}
       </Content>

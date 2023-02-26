@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { CardDropdownMenu } from '../CardDropdownMenu';
 import styles from './cardmenu.css';
 
-interface IDropsownProps {
-  open?: boolean;
-  setOpen?: () => void;
-}
 
 export function CardMenu() {
     const [open, setOpen] = useState(false)
