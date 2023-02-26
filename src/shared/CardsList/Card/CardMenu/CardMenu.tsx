@@ -8,7 +8,7 @@ interface IDropsownProps {
 }
 
 export function CardMenu() {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
   console.log('open===>', open);
   
   return (
