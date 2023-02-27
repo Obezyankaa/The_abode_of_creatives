@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CardDropdownMenu } from '../CardDropdownMenu';
-import styles from './cardmenu.scss';
+import styles from './cardmenu.css';
 
 
 export function CardMenu() {

@@ -1,7 +1,7 @@
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 const NODE_ENV = process.env.NODE_ENV;
-const GLOBAL_CSS_REGEXP = /\.global\.scss$/;
+const GLOBAL_CSS_REGEXP = /\.global\.css$/;
 
 
 
@@ -25,7 +25,7 @@ module.exports = {
       use:['ts-loader']
     },
       {
-      test: /\.(ca|sc|c)ss$/,
+      test: /\.css$/,
         use: [{
         loader: 'css-loader',
         options: {

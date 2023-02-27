@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './cardtext.scss';
+import styles from './cardtext.css';
 
 export function CardText() {
   return (
