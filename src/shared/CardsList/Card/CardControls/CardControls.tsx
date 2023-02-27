@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './cardcontrols.css';
+import styles from './cardcontrols.scss';
 
 export function CardControls() {
   return (

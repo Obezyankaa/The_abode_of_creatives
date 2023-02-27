@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './carddropdownmenu.css';
+import styles from './carddropdownmenu.scss';
 
 interface IDropsownProps {
   open: boolean;

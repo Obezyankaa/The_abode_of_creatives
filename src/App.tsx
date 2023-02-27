@@ -1,5 +1,6 @@
 import React from 'react'
-import './main.global.css';
+// import './main.global.scss';
+import styles from './index.scss';
 import { hot } from 'react-hot-loader/root'
 import { Layout } from './shared/Layout';
 import { Header } from './shared/Header/Header'
@@ -18,6 +19,9 @@ function AppComponent() {
           <div>block</div>
           </Dropdown>
         </div> */}
+        <div className={styles.test}>
+          <h1>test</h1>
+        </div>
       </Content>
     </Layout>
   )

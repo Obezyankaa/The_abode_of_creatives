@@ -26,6 +26,8 @@
     "nodemon": "^2.0.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "sass": "^1.58.3",
+    "sass-resources-loader": "^2.2.5",
     "webpack-node-externals": "^3.0.0",
     "yo": "^4.3.1"
   },

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './dropdown.css';
+import styles from './dropdown.scss';
 
 interface IDropsownProps {
   button: React.ReactNode;
