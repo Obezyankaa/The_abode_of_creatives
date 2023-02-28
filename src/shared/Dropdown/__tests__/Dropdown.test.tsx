@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from "react"
 import { Dropdown } from "../Dropdown"
 import { shallow } from 'enzyme';
@@ -13,7 +9,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('Dropdown', () => {
     test('should render', () => {
         const wrapper = shallow(<Dropdown children={<div />} button={<button />} />)
-        // console.log(window);
         expect(wrapper).toBeDefined();        
         expect(wrapper.find('div.container').isEmptyRender()).toBeFalsy();
     })
