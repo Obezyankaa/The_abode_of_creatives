@@ -6,6 +6,7 @@ import styles from './cardmenu.css';
 export function CardMenu() {
     const [open, setOpen] = useState(false)
   console.log('open===>', open);
+  const postId = '123';
   
   return (
     <>
@@ -18,7 +19,7 @@ export function CardMenu() {
             </svg>
         </button>
       </div>
-      {open ? (<CardDropdownMenu open={open} setOpen={setOpen}  />) : (console.log('закрыт'))}
+      {open ? (<CardDropdownMenu open={open} setOpen={setOpen} postId={postId}  />) : (console.log('закрыт'))}
     </>
   );
 }
