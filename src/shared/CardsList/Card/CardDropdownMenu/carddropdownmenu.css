@@ -1,31 +1,37 @@
 .cmd__block {
     position: absolute;
-    right: 54px;
-    top: 100px;
+    right: 40px;
+    top: 105px;
     background-color: rgb(255, 255, 255);
     width: 157px;
-    height: 156px;  
+    height: 229px;  
     border-radius: 3px 3px 3px 3px;
     box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
 }
 
-.cmd__item {
-    display: flex;
-    align-items: center;
-    padding: 5px 15px;
-    cursor: pointer;
+.cmd__list {
+    /* padding-top: 10px; */
 }
 
 
-.cmd__svg:hover { 
-    color: red; 
-    fill: red; 
-} 
+.cmd__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cmd__item:nth-child(5) {
+    padding-right: 17px;
+}
+
 
 .cmd__block_text {
-    padding-bottom: 10px;
     border-bottom: 1px solid #ECECEC;
     width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .cmd__block_text_complain {
@@ -33,6 +39,7 @@
 }
 
 .cmd__span {
+    font-size: 14px;
     color: #999999;
     margin-left: 5px;
 }
@@ -44,8 +51,11 @@
 .cmd__item__close {
     display: flex;
     background-color: var(--gray);
+    color: #666666;
     width: 100%;
     justify-content: center;
+    padding: 7px;
+    border-radius: 0px 0px 3px 3px;
 }
 
 @media all and (max-width: 1024px) {
@@ -61,24 +71,34 @@
 }
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1024px) {
    .cmd__block {
-    height: 197px;
-    padding: 10px 0px;   
-    right: 15px;
-    top: 85px;
+    right: 20px;
+    top: 90px;
+   }
 }
 
-   .cmd__item:nth-child(6n) {
-    display: none;
-   }
+@media all and (min-width: 1540px) {
+    .cmd__block {
+        right: 40px;
+        top: 105px;
+    }
 }
 
 @media all and (max-width: 1023px) {
     .cmd__block {
-       height: 110px;
-       top: 50px;
+            position: absolute;
+            top: 50px;
+            width: 140px;
+            height: 110px;
+            padding-top: 10px;
     }
+
+        .cmd__block_text {
+            display: flex;
+            align-items: center;
+            padding-bottom: 12px;
+        }
         
     .cmd__item:nth-child(3n+1) {
         display: none;
@@ -87,5 +107,21 @@
      .cmd__item:nth-child(-4n+2) {
         display: none;
     }
+           .cmd__item:nth-child(3) {
+               font-size: 12px;
+               padding: 0px 20px 0px 20px;
+           }
+    
+           .cmd__item:nth-child(5) {
+               padding: 10px 15px 13px 20px;
+           }
+    
+           .cmd__item:nth-child(5) div {
+               padding-bottom: 0px;
+           }
+    
+           .cmd__span {
+               font-size: 12px;
+           }
 
 }
