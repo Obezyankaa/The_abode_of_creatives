@@ -141,10 +141,3 @@
     }
 }
 
-@media all and (max-width: 490px) {
-    .createdAt {
-        font-size: 10px ;
-        margin-left: 10px;
-    }
-}
-
