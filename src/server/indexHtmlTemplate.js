@@ -1,4 +1,4 @@
-export const indexHtmlTemplate = (content) => `
+export const indexHtmlTemplate = (content, token) =>`
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +9,10 @@ export const indexHtmlTemplate = (content) => `
   <link rel="icon" href="https://icon-library.com/images/click-hand-icon/click-hand-icon-9.jpg">
   <title>New Blogger</title>
   <script src="/static/client.js" type="application/javascript"></script>
+  <script>
+    window.__token__ = '${token}'
+  </script>
+
 
 </head>
 

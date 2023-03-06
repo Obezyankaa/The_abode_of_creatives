@@ -5,11 +5,15 @@ import { Layout } from './shared/Layout';
 import { Header } from './shared/Header/Header'
 import { Content } from './shared/Content';
 import { CardsList } from './shared/CardsList';
-// import { Dropdown } from './shared/Dropdown';
+import { useToken } from './hooks/useToken';
 function AppComponent() {
+
+  const [token] = useToken();
+  console.log([token]);
+  
   return (
     <Layout>
-      <Header />
+      <Header token={token} />
       <Content>
         <CardsList />
         {/* <div style={{padding: 20}}>
