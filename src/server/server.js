@@ -5,7 +5,14 @@ import { App } from '../App.tsx'
 const app = express();
 
 app.use("/static", express.static("./dist/client"));
+
 app.get("/", (req, res) => {
+  res.send(indexHtmlTemplate(ReactDOM.renderToString(App())));
+});
+
+app.get("/auth", (req, res) => {
+  // console.log(req);
+  req.query.code
   res.send(indexHtmlTemplate(ReactDOM.renderToString(App())));
 });
 
