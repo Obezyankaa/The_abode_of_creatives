@@ -6,12 +6,15 @@ import { Header } from './shared/Header/Header'
 import { Content } from './shared/Content';
 import { CardsList } from './shared/CardsList';
 import { useToken } from './hooks/useToken';
+import { tokenContext } from './shared/context/tokenContext'
 function AppComponent() {
 // test
   const [token] = useToken();  
+  const { Provider } = tokenContext;
   return (
+   <Provider value={token}>
     <Layout>
-      <Header token={token} />
+      <Header />
       <Content>
         <CardsList />
         {/* <div style={{padding: 20}}>
@@ -22,6 +25,7 @@ function AppComponent() {
         </div> */}
       </Content>
     </Layout>
+    </Provider>
   )
 }
 
