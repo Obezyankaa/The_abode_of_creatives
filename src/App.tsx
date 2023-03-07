@@ -8,9 +8,7 @@ import { CardsList } from './shared/CardsList';
 import { useToken } from './hooks/useToken';
 function AppComponent() {
 
-  const [token] = useToken();
-  console.log([token]);
-  
+  const [token] = useToken();  
   return (
     <Layout>
       <Header token={token} />

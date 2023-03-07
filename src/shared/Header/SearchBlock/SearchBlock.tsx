@@ -15,16 +15,21 @@ interface IUserData {
 export function SearchBlock({ token }: ISeachProps) {
   
   const [data, setData] = useState<IUserData>({})
+  console.log('SearchBlock data ---> ', data)
 
   useEffect(() => {
-      axios.get('https://oauth.reddit.com/api/v1/me', {
+    if (!token || token === "undefined") return;
+    axios.get('https://oauth.reddit.com/api/v1/me.json',
+      {
         headers: { Authorization: `bearer${token}` }
       })
-        .then((resp) => {
+      .then((resp) => {
+          console.log(resp);
+          
           const userData = resp.data;
-          console.log(userData);
-        
-          setData({ name: userData.name, iconImg: userData.icon_img })
+          const icon = userData.icon_img.split('?')[0];
+          console.log('userData-->>', userData);
+          setData({ name: userData.name, iconImg: icon })
         })
         .catch(console.log)
   },[token])
