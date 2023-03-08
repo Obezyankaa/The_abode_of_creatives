@@ -17,12 +17,6 @@ function AppComponent() {
       <Header />
       <Content>
         <CardsList />
-        {/* <div style={{padding: 20}}>
-          <br />
-          <Dropdown onClose={() => console.log('closed')} onOpen={() => console.log('opened')} button={<button>Test</button>}>
-          <div>block</div>
-          </Dropdown>
-        </div> */}
       </Content>
     </Layout>
     </Provider>
