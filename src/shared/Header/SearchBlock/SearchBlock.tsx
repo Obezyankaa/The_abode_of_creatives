@@ -1,15 +1,14 @@
 import axios from 'axios';
-import React from 'react';
-import { useUserData } from '../../../hooks/useUserData';
+import React, { useContext } from 'react';
+import { userContext } from '../../context/userContext';
 import styles from './searchblock.css';
 import { UserBlock } from './UserBlock';
 
 export function SearchBlock() {
-  const [data] = useUserData();
-  
+  const { iconImg, name} = useContext(userContext);
   return (
     <div className={styles.searchBlock}>
-      <UserBlock avatarSrc={data.iconImg} username={data.name} />
+      <UserBlock avatarSrc={iconImg} username={name} />
     </div>
   );
 }
