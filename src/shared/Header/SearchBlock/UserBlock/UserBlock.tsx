@@ -11,8 +11,8 @@ interface IUserBlockProps {
 
 
 export function UserBlock({ avatarSrc, username }: IUserBlockProps) {
-  console.log('UserBlock avatar ---> ',avatarSrc );
-    console.log('UserBlock username --->', username);
+  // console.log('UserBlock avatar ---> ',avatarSrc );
+  //   console.log('UserBlock username --->', username);
 
   
   return (

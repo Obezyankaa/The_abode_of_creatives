@@ -12,17 +12,19 @@ export function useUserData() {
       const [data, setData] = useState<IUserData>({})
   useEffect(() => {
     if (!token || token === "undefined") return;
-    axios.get('https://oauth.reddit.com/api/v1/me',
-      {
-        headers: { Authorization: `bearer${token}` }
+    axios.get("https://oauth.reddit.com/api/v1/me", {
+        headers: { Authorization: `bearer${token}` },
       })
-      .then((resp) => {          
-          const userData = resp.data;
-          const icon = userData.icon_img.split('?')[0];
-          setData({ name: userData.name, iconImg: icon })
-        })
-        .catch(console.log)
-  }, [token])
+      .then((resp) => {
+        const userData = resp.data;
+        console.log(resp);
 
+        const icon = userData.icon_img.split("?")[0];
+        setData({ name: userData.name, iconImg: icon });
+      })
+      .catch(console.log);
+  }, [token])
+  // console.log("useUserData--->", data);
+  
     return [data]
 }
