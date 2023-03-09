@@ -18,7 +18,6 @@ export function usePostsData() {
         })
         .catch(console.log);
     }, [token]);
-console.log(posts);
 
     return [posts];
 }
