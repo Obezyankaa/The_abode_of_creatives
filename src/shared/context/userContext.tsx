@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { useUserData } from "../../hooks/useUserData";
 
 export interface IUserContextData {

@@ -17,8 +17,6 @@ export function useUserData() {
       })
       .then((resp) => {
         const userData = resp.data;
-        console.log(resp);
-
         const icon = userData.icon_img.split("?")[0];
         setData({ name: userData.name, iconImg: icon });
       })
