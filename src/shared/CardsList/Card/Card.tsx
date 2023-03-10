@@ -5,15 +5,22 @@ import { CardMenu } from './CardMenu';
 import { CardPreview } from './CardPreview';
 import { CardText } from './CardText';
 
-export function Card() {
+interface ICardProps {
+ title: any
+}
+
+export function Card({ title }: ICardProps) {
+  
+  console.log("title--->", title);
+  
   return (
     <div>
-    <li className={styles.card}>
-      <CardText />
-      <CardPreview />
-      <CardMenu />
-      <CardControls />
-    </li>
+      <li className={styles.card}>
+        <CardText />
+        <CardPreview />
+        <CardMenu />
+        <CardControls />
+      </li>
     </div>
   );
 }

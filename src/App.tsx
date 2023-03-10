@@ -17,14 +17,14 @@ function AppComponent() {
   return (
     <tokenContext.Provider value={token}>
       <UserContextProvider>
-        <postsContext.Provider value={posts}>
         <Layout>
           <Header />
           <Content>
+           <postsContext.Provider value={posts}>
             <CardsList />
+          </postsContext.Provider>
           </Content>
         </Layout>
-        </postsContext.Provider>
       </UserContextProvider>
     </tokenContext.Provider>
   );
