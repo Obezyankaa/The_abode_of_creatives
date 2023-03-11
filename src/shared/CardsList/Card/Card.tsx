@@ -13,13 +13,7 @@ interface ICardProps {
   created_utc: number
 }
 
-export function Card({
-  author,
-  title,
-  img_banner,
-  icon_img,
-  created_utc,
-}: ICardProps) {
+export function Card({ author, title, img_banner, icon_img, created_utc }: ICardProps) {
   return (
     <li className={styles.card}>
       <CardText
