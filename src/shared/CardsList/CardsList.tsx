@@ -3,35 +3,30 @@ import { postsContext } from '../context/postsContext';
 import { Card } from './Card/Card';
 import styles from './cardslist.css';
 
-interface ICardsList {
-  data: any;
-  id: string;
-  created: number;
-  num_comments: number;
-  score: number;
-  sr_detail: { icon_img: string };
-  subreddit: string;
-  title: string;
-  thumbnail: string;
-}
-
 
 export function CardsList() {
-  const value = useContext(postsContext);
-  console.log("valueContext", value);
+  const postData = useContext(postsContext)
+  let test = postData.forEach((post) => console.log(post));
 
+  console.log(test);
+  
+  
   return (
     <>
       <ul className={styles.cardsList}>
-        {value.map((el: ICardsList) => {
-          <Card title={el} />;
-        })}
+        {postData.map((el) => (
+          <Card
+           key={el.data.author}
+            title={el.data.author} />
+        ))}
       </ul>
       {/* <ul className={styles.cardsList}>
-        {value.map((el: any) => (
+        {postData.map((el: any) => (
           <li key={el.id}>
-            <div>{el.title}</div>
-            <img src={el.thumbnail} alt="фото поста" />
+            <div>автор: {el.data.author}</div>
+            <div>{el.data.title}</div>
+
+            <img src={el.data.thumbnail} alt="фото поста" />
           </li>
         ))}
       </ul> */}

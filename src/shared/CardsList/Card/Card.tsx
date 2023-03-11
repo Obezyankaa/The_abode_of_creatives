@@ -6,13 +6,11 @@ import { CardPreview } from './CardPreview';
 import { CardText } from './CardText';
 
 interface ICardProps {
- title: any
+  title: string
 }
 
-export function Card({ title }: ICardProps) {
-  
-  console.log("title--->", title);
-  
+export function Card({title}: ICardProps) {
+    console.log(title);
   return (
     <div>
       <li className={styles.card}>

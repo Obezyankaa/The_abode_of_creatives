@@ -2,21 +2,18 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { tokenContext } from "../shared/context/tokenContext";
 
-interface IGetFromAPI {
-  data: any;
-  id: string;
-  created: number;
-  num_comments: number;
-  score: number;
-  sr_detail: { icon_img: string };
-  subreddit: string;
-  title: string;
-  thumbnail: string;
-}
+
+ interface Post {
+   data: {
+     author: string;
+     title: string;
+     id: string;
+   }
+ }
 
 export function usePostsData() {
     const token = useContext(tokenContext)
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<Post[]>([]);
 
     useEffect(() => {
       axios
@@ -24,8 +21,7 @@ export function usePostsData() {
           headers: { Authorization: `bearer${token}` },
         })
         .then((res) => {
-          const postsData = res.data;
-          setPosts(postsData.data.children.map((el: IGetFromAPI) => el.data));
+          setPosts(res.data.data.children);
         })
         .catch(console.log);
     }, [token]);
