@@ -12,7 +12,8 @@ export function useUserData() {
       const [data, setData] = useState<IUserData>({})
   useEffect(() => {
     if (!token || token === "undefined") return;
-    axios.get("https://oauth.reddit.com/api/v1/me", {
+    axios
+      .get("https://oauth.reddit.com/api/v1/me.json", {
         headers: { Authorization: `bearer${token}` },
       })
       .then((resp) => {
