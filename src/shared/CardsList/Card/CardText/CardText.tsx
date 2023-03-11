@@ -1,24 +1,39 @@
 import React from 'react';
 import styles from './cardtext.css';
 
-export function CardText() {
+interface ICartProps {
+  author: string;
+  title: string;
+  icon_img: string;
+  created_utc: number
+}
+
+
+export function CardText({ author, title, icon_img, created_utc }: ICartProps) {
+  
+const timestamp = created_utc; // значение в секундах с 1 января 1970 года
+const dateTime = new Date(timestamp * 1000).toString();
+  let dataPosts = dateTime.split(' ').slice(1, 4).join().replace(",", " ").replace(",", " ");
+  
   return (
-      <div className={styles.textContent}>
-        <div className={styles.mataData}>
-          <div className={styles.userLink}>
-            <img className={styles.avatar} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="фото профиля" />
-            <a href="/autor" className={styles.username}>vlad voloshanowskiy</a>
-          </div>
-          <span className={styles.createdAt}>
-            <span className={styles.publishedLabel}>опубликовано</span>
-            4 часа назад
-          </span>
-        </div>
-        <h2 className={styles.title}>
-          <a href="/post/autora" className={styles.postLink}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, necessitatibus magnam! Deleniti reiciendis voluptatum iste eos numquam dolorum dolorem in ut suscipit ipsa vitae sit neque explicabo ea, illum voluptatem?
+    <div className={styles.textContent}>
+      <div className={styles.mataData}>
+        <div className={styles.userLink}>
+          <img className={styles.avatar} src={icon_img} alt="фото профиля" />
+          <a href="/autor" className={styles.username}>
+            {author}
           </a>
-        </h2>
+        </div>
+        <span className={styles.createdAt}>
+          <span className={styles.publishedLabel}>опубликовано</span>
+          {dataPosts}
+        </span>
       </div>
+      <h2 className={styles.title}>
+        <a href="/post/autora" className={styles.postLink}>
+          {title}
+        </a>
+      </h2>
+    </div>
   );
 }

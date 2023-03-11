@@ -5,7 +5,6 @@ import styles from './cardmenu.css';
 
 export function CardMenu() {
     const [open, setOpen] = useState(false)
-  console.log('open===>', open);
   const postId = '123';
   
   return (

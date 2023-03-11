@@ -28,6 +28,7 @@
         flex-flow: row nowrap;
         max-height: 107px;
         padding: 0 40px;
+        margin-bottom: 38px;
     }
 
     .card>* {

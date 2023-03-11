@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './cardpreview.css';
 
-export function CardPreview() {
-  return (
-    <div className={styles.preview}>
-        <img className={styles.previewImg} src="https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg" alt="фото поста" />
+interface ICardPreview {
+  img_banner: string
+}
+
+export function CardPreview({ img_banner }: ICardPreview) {    
+    return (
+      <div className={styles.preview}>
+          <img
+            className={styles.previewImg}
+            src={img_banner}
+            alt="фото поста"
+          />
       </div>
-  );
+    );
 }

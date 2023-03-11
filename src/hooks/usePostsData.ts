@@ -8,7 +8,12 @@ import { tokenContext } from "../shared/context/tokenContext";
      author: string;
      title: string;
      id: string;
-   }
+     sr_detail: {
+       banner_img: string;
+       icon_img: string;
+       created_utc: number
+     };
+   };
  }
 
 export function usePostsData() {

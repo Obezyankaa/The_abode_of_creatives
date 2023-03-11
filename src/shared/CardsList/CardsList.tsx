@@ -6,30 +6,22 @@ import styles from './cardslist.css';
 
 export function CardsList() {
   const postData = useContext(postsContext)
-  let test = postData.forEach((post) => console.log(post));
-
-  console.log(test);
-  
+  console.log(postData);
   
   return (
     <>
       <ul className={styles.cardsList}>
         {postData.map((el) => (
           <Card
-           key={el.data.author}
-            title={el.data.author} />
+            key={el.data.id}
+            author={el.data.author}
+            title={el.data.title}
+            img_banner={el.data.sr_detail.banner_img}
+            icon_img={el.data.sr_detail.icon_img}
+            created_utc={el.data.sr_detail.created_utc}
+          />
         ))}
       </ul>
-      {/* <ul className={styles.cardsList}>
-        {postData.map((el: any) => (
-          <li key={el.id}>
-            <div>автор: {el.data.author}</div>
-            <div>{el.data.title}</div>
-
-            <img src={el.data.thumbnail} alt="фото поста" />
-          </li>
-        ))}
-      </ul> */}
     </>
   );
 }

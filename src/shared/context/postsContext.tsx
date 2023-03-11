@@ -2,12 +2,17 @@ import React from "react";
 import { usePostsData } from "../../hooks/usePostsData";
 
 interface IPostContext {
-   data: {
-     author: string;
-     title: string;
-     id: string;
-   }
- }
+  data: {
+    author: string;
+    title: string;
+    id: string;
+    sr_detail: {
+      banner_img: string;
+      icon_img: string;
+      created_utc: number
+    };
+  };
+}
 
 export const postsContext = React.createContext<IPostContext[]>([{} as IPostContext]);
 
