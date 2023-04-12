@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Post } from '../../../Post';
 import styles from './cardtext.css';
 
 interface ICartProps {
@@ -10,6 +11,8 @@ interface ICartProps {
 
 
 export function CardText({ author, title, icon_img, created_utc }: ICartProps) {
+
+  const [isModalOpened, setIsModalOpened] = useState(false);
   
 const timestamp = created_utc; // значение в секундах с 1 января 1970 года
 const dateTime = new Date(timestamp * 1000).toString();
@@ -19,7 +22,15 @@ const dateTime = new Date(timestamp * 1000).toString();
     <div className={styles.textContent}>
       <div className={styles.mataData}>
         <div className={styles.userLink}>
-          <img className={styles.avatar} src={icon_img ? icon_img : "https://emdigital.ru/images/ilensAvas/mcdonalds_rus.jpeg"} alt="фото профиля" />
+          <img
+            className={styles.avatar}
+            src={
+              icon_img
+                ? icon_img
+                : "https://emdigital.ru/images/ilensAvas/mcdonalds_rus.jpeg"
+            }
+            alt="фото профиля"
+          />
           <a href="/autor" className={styles.username}>
             {author}
           </a>
@@ -30,9 +41,16 @@ const dateTime = new Date(timestamp * 1000).toString();
         </span>
       </div>
       <h2 className={styles.title}>
-        <a href="/post/autora" className={styles.postLink}>
+        <button
+          className={styles.postLink}
+          onClick={() => {
+            setIsModalOpened(!isModalOpened);
+          }}
+        >
           {title}
-        </a>
+        </button>
+
+        {isModalOpened && <Post onClose={() => { setIsModalOpened(false) }} />}
       </h2>
     </div>
   );
