@@ -19,7 +19,7 @@ const dateTime = new Date(timestamp * 1000).toString();
     <div className={styles.textContent}>
       <div className={styles.mataData}>
         <div className={styles.userLink}>
-          <img className={styles.avatar} src={icon_img} alt="фото профиля" />
+          <img className={styles.avatar} src={icon_img ? icon_img : "https://emdigital.ru/images/ilensAvas/mcdonalds_rus.jpeg"} alt="фото профиля" />
           <a href="/autor" className={styles.username}>
             {author}
           </a>
