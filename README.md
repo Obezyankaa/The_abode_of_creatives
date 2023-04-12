@@ -1,6 +1,6 @@
-## Portal 
+# New Blogger
 
-###  Demo Portal 🧑‍💻
+### New Blogger 🧑‍💻
 
 - Demo site for miratorg in dubai, using HTML, EXPRESS, WEBPACK, TYPESCRIPT & GSAP.
 - Contains animations when scrolling.
@@ -8,6 +8,6 @@
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 - On the portal, you can monitor your post statistics, there is also a personal account where your popularity is shown, and also the number of views of your profile.
 
-Join the channel to see more videos like this. [Telegram](https://t.me/Voloshanovskiy_V)
+My telegram you can text me [Telegram](https://t.me/Voloshanovskiy_V)
 
-<!-- ![travel-website](/preview.jpg) -->
+![travel-website](/site-blog.jpg)
