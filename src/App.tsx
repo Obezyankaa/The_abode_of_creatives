@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./main.global.css";
 import { hot } from "react-hot-loader/root";
 import { Layout } from "./shared/Layout";
@@ -9,22 +9,33 @@ import { useToken } from "./hooks/useToken";
 import { tokenContext } from "./shared/context/tokenContext";
 import { UserContextProvider } from "./shared/context/userContext";
 import { PostContextProvider } from "./shared/context/postsContext";
+import { CommentContext } from "./shared/context/commentContext";
 function AppComponent() {
+  const [commentValue, setCommentValue] = useState("");
   const [token] = useToken();
+
+  const CommentProvider = CommentContext.Provider;
   
   return (
-    <tokenContext.Provider value={token}>
-      <UserContextProvider>
-        <Layout>
-          <Header />
-          <Content>
-            <PostContextProvider>
-              <CardsList />
-            </PostContextProvider>
-          </Content>
-        </Layout>
-      </UserContextProvider>
-    </tokenContext.Provider>
+    <CommentProvider
+      value={{
+        value: commentValue,
+        onCahge: setCommentValue,
+      }}
+    >
+      <tokenContext.Provider value={token}>
+        <UserContextProvider>
+          <Layout>
+            <Header />
+            <Content>
+              <PostContextProvider>
+                <CardsList />
+              </PostContextProvider>
+            </Content>
+          </Layout>
+        </UserContextProvider>
+      </tokenContext.Provider>
+    </CommentProvider>
   );
 }
 

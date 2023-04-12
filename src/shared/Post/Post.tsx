@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { CommentForm } from '../CardsList/CommentForm';
 import styles from './post.css';
 
 interface Ipost {
@@ -57,6 +58,7 @@ export function Post(props: Ipost) {
           suscipit nesciunt officiis accusamus!
         </p>
       </div>
+      <CommentForm />
     </div>,
     node
   );

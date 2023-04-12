@@ -18,7 +18,7 @@ export function CardMenu() {
             </svg>
         </button>
       </div>
-      {open ? (<CardDropdownMenu open={open} setOpen={setOpen} postId={postId}  />) : (console.log('закрыт'))}
+      {open && <CardDropdownMenu open={open} setOpen={setOpen} postId={postId}  /> }
     </>
   );
 }

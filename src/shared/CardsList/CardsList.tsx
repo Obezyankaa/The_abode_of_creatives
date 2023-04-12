@@ -5,9 +5,7 @@ import styles from './cardslist.css';
 
 
 export function CardsList() {
-  const postData = useContext(postsContext)
-  console.log(postData);
-  
+  const postData = useContext(postsContext)  
   return (
     <>
       <ul className={styles.cardsList}>
