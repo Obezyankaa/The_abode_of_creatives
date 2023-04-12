@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './carddropdownmenu.css';
-
 // const postId = '12';
 
 interface IDropsownProps {
@@ -12,6 +11,7 @@ interface IDropsownProps {
 export function CardDropdownMenu({open,setOpen, postId}:IDropsownProps) {
   return (
     <div className={styles.cmd__block}>
+      <div className='test'></div>
       <ul className={styles.cmd__list}>
         <li className={styles.cmd__item}> 
           <div className={styles.cmd__block_text}>
