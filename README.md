@@ -2,7 +2,7 @@
 
 ### New Blogger 🧑‍💻
 
-- Demo site for miratorg in dubai, using HTML, EXPRESS, WEBPACK, TYPESCRIPT & GSAP.
+- Demo site for New Blogger, using HTML, EXPRESS, WEBPACK, TYPESCRIPT & GSAP.
 - Contains animations when scrolling.
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
