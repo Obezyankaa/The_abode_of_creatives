@@ -1,4 +1,4 @@
-export const indexHtmlTemplate = (content, token) =>`
+export const indexHtmlTemplate = (content, token) => `
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +19,7 @@ export const indexHtmlTemplate = (content, token) =>`
 <body>
   <div id="react_root">${content}</div>
   <div id="modal_root"></div>
+  <div id="dropdowmenu_root"></div>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 .cmd__block {
-    position: absolute;
+    position: fixed;
     right: 40px;
     top: 105px;
     z-index: 9;
