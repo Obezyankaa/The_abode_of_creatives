@@ -57,16 +57,23 @@
   line-height: 14px;
 }
 
-.containerButton {
-
-}
-
-.blockIcon {
-  
-}
-
 @media all and (min-width: 1024px) {
   .commentsButton {
     display: none;
   }
+
+  .сontainerButton {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(229 229 229);
+}
+
+.blockIcon {
+    background-color: rgb(229 229 229);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: 0 0 3px 3px;
+    padding: 0px 95px 0px 19px;
+}
 }
