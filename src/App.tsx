@@ -10,6 +10,7 @@ import { tokenContext } from "./shared/context/tokenContext";
 import { UserContextProvider } from "./shared/context/userContext";
 import { PostContextProvider } from "./shared/context/postsContext";
 import { CommentContext } from "./shared/context/commentContext";
+
 function AppComponent() {
   const [commentValue, setCommentValue] = useState("");
   const [token] = useToken();
