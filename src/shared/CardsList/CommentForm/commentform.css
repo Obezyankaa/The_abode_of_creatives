@@ -57,6 +57,14 @@
   line-height: 14px;
 }
 
+.containerButton {
+
+}
+
+.blockIcon {
+  
+}
+
 @media all and (min-width: 1024px) {
   .commentsButton {
     display: none;

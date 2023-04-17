@@ -16,7 +16,7 @@ export function CardDropdownMenu({ open, setOpen, postId, rect }: IDropsownProps
 
   return ReactDOM.createPortal(
     <div className={styles.cmd__block} style={{
-      top: Math.round(rect ? rect.top + rect?.height * 1 : 0),
+      top: Math.round(rect ? rect.top + rect?.height * 0.9 : 0),
       left: Math.round(rect? rect.left - rect?.width * 2: 0)
     }} >
       <div className="test"></div>
