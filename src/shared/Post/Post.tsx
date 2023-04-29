@@ -5,11 +5,11 @@ import styles from './post.css';
 
 interface Ipost {
   onClose?: () => void;
+  id: string;
 }
 
 export function Post(props: Ipost) {
-  const ref = useRef<HTMLDivElement>(null) 
-
+  const ref = useRef<HTMLDivElement>(null)   
   useEffect(() => {
     function handleClick(event: MouseEvent) {
       if (event.target instanceof Node && !ref.current?.contains(event.target)) {
@@ -58,7 +58,7 @@ export function Post(props: Ipost) {
           suscipit nesciunt officiis accusamus!
         </p>
       </div>
-      <CommentForm />
+      <CommentForm id={props.id} />
     </div>,
     node
   );

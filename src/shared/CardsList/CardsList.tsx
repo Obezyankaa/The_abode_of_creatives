@@ -17,6 +17,7 @@ export function CardsList() {
             img_banner={el.data.sr_detail.banner_img}
             icon_img={el.data.sr_detail.icon_img}
             created_utc={el.data.sr_detail.created_utc}
+            id={el.data.id}
           />
         ))}
       </ul>

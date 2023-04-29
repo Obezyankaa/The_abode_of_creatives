@@ -13,13 +13,13 @@ export function useUserData() {
   useEffect(() => {
     if (!token || token === "undefined") return;
     axios
-      .get("https://oauth.reddit.com/api/v1/me.json", {
+      .get("https://oauth.reddit.com/api/v1/me", {
         headers: { Authorization: `bearer${token}` },
       })
       .then((resp) => {
         const userData = resp.data;
-        const icon = userData.icon_img.split("?")[0];
-        setData({ name: userData.name, iconImg: icon });
+        // const icon = userData.icon_img.split("?")[0];
+        setData({ name: userData.name, iconImg: userData.icon });
       })
       .catch(console.log);
   }, [token])

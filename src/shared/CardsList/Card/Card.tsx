@@ -6,14 +6,22 @@ import { CardPreview } from './CardPreview';
 import { CardText } from './CardText';
 
 interface ICardProps {
+  id: string;
   author: string;
   title: string;
   img_banner: string;
   icon_img: string;
-  created_utc: number
+  created_utc: number;
 }
 
-export function Card({ author, title, img_banner, icon_img, created_utc }: ICardProps) {
+export function Card({
+  author,
+  title,
+  img_banner,
+  icon_img,
+  created_utc,
+  id
+}: ICardProps) {
   return (
     <li className={styles.card}>
       <CardText
@@ -21,6 +29,7 @@ export function Card({ author, title, img_banner, icon_img, created_utc }: ICard
         title={title}
         icon_img={icon_img}
         created_utc={created_utc}
+        id={id}
       />
       <CardPreview img_banner={img_banner} />
       <CardMenu />

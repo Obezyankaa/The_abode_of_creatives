@@ -8,10 +8,11 @@ import { tokenContext } from "../shared/context/tokenContext";
      author: string;
      title: string;
      id: string;
+     subreddit: string;
      sr_detail: {
        banner_img: string;
        icon_img: string;
-       created_utc: number
+       created_utc: number;
      };
    };
  }
@@ -23,6 +24,7 @@ export function usePostsData() {
     useEffect(() => {
       axios
         .get("https://oauth.reddit.com/best.json?sr_detail=true", {
+          params: { limit: 5 },
           headers: { Authorization: `bearer${token}` },
         })
         .then((res) => {
@@ -30,6 +32,7 @@ export function usePostsData() {
         })
         .catch(console.log);
     }, [token]);
-
+    console.log(posts);
+    
     return [posts];
 }

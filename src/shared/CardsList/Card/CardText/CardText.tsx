@@ -6,18 +6,29 @@ interface ICartProps {
   author: string;
   title: string;
   icon_img: string;
-  created_utc: number
+  created_utc: number;
+  id: string;
 }
 
 
-export function CardText({ author, title, icon_img, created_utc }: ICartProps) {
-
+export function CardText({
+  author,
+  title,
+  icon_img,
+  created_utc,
+  id
+}: ICartProps) {
   const [isModalOpened, setIsModalOpened] = useState(false);
-  
-const timestamp = created_utc; // значение в секундах с 1 января 1970 года
-const dateTime = new Date(timestamp * 1000).toString();
-  let dataPosts = dateTime.split(' ').slice(1, 4).join().replace(",", " ").replace(",", " ");
-  
+
+  const timestamp = created_utc; // значение в секундах с 1 января 1970 года
+  const dateTime = new Date(timestamp * 1000).toString();
+  let dataPosts = dateTime
+    .split(" ")
+    .slice(1, 4)
+    .join()
+    .replace(",", " ")
+    .replace(",", " ");
+
   return (
     <div className={styles.textContent}>
       <div className={styles.mataData}>
@@ -50,7 +61,14 @@ const dateTime = new Date(timestamp * 1000).toString();
           {title}
         </button>
 
-        {isModalOpened && <Post onClose={() => { setIsModalOpened(false) }} />}
+        {isModalOpened && (
+          <Post
+            id={id}
+            onClose={() => {
+              setIsModalOpened(false);
+            }}
+          />
+        )}
       </h2>
     </div>
   );
